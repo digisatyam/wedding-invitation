@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>शुभ विवाह | कंचन संग जीतेन्द्र</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+Devanagari:wght@400;700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDF2E9; /* Soft warm background */
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23E7A94F' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); /* Subtle pattern */
+        }
+        .hindi-text {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+        .cursive-text {
+            font-family: 'Great Vibes', cursive;
+        }
+        .serif-text { /* For a more traditional feel for some English text */
+            font-family: 'Playfair Display', serif;
+        }
+        .card-container {
+            max-width: 650px; /* Slightly wider card */
+            margin: 2rem auto;
+            background: linear-gradient(135deg, #FFF8E1 0%, #FFE0B2 100%); /* Creamy gradient background */
+            border: 10px solid #B71C1C; /* Darker, richer red border */
+            border-image: linear-gradient(to right, #B71C1C, #E7A94F, #B71C1C) 1; /* Gradient border effect */
+            border-radius: 25px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            position: relative;
+            padding-bottom: 1rem; /* Space for elements at the bottom */
+        }
+        .decorative-top-arch {
+            width: 130%;
+            height: 100px;
+            background: linear-gradient(to bottom, #A31A1A, #C0392B); /* Gradient for arch */
+            border-bottom-left-radius: 60% 50px;
+            border-bottom-right-radius: 60% 50px;
+            position: absolute;
+            top: -10px; /* Slightly overlap border */
+            left: -15%;
+            z-index: 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .card-content-wrapper {
+            position: relative;
+            z-index: 1;
+            padding: 2rem 1.5rem; /* Increased padding */
+        }
+        .ganesh-icon { /* Placeholder for a Ganesh icon */
+            width: 50px;
+            height: 50px;
+            margin: 0 auto 0.5rem auto;
+            /* background-image: url('path-to-ganesh-icon.svg'); */ /* Ideally use an SVG */
+            background-color: #E7A94F; /* Placeholder color */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #B71C1C;
+            font-size: 1.5rem; /* For text placeholder */
+            font-weight: bold;
+        }
+        .shubh-vivah-title {
+            font-size: 3rem; /* Larger title */
+            font-weight: bold;
+            color: #A31A1A; /* Darker red */
+            margin-top: 1rem; /* Adjusted spacing */
+            margin-bottom: 1.5rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        .couple-names h2 {
+            font-size: 2.8rem; /* Larger names */
+            color: #881C1C;
+            margin-bottom: 0.25rem;
+            text-shadow: 1px 1px 1px #fff;
+        }
+        .couple-names .sang {
+            font-size: 1.8rem; /* Slightly larger 'sang' */
+            color: #D35400;
+            margin: 0.75rem 0;
+        }
+        .event-details {
+            border-top: 3px dotted #E7A94F; /* Dotted border */
+            border-bottom: 3px dotted #E7A94F;
+            padding: 2rem 0.5rem;
+            margin: 2rem 0;
+        }
+        .event-item {
+            background: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+            border: 1px solid #FAD7A0; /* Light gold border */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .event-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+        .event-item h3 {
+            font-size: 1.8rem; /* Larger event titles */
+            color: #B71C1C;
+            margin-bottom: 0.5rem;
+        }
+        .event-item p.date-text { /* Specific class for date */
+            font-size: 1.25rem; /* Larger date */
+            color: #5D4037;
+            font-weight: 600; /* Bolder date */
+        }
+        .event-item p.day-text { /* Specific class for day */
+            font-size: 1.1rem;
+            color: #D35400; /* Orange for day */
+        }
+        .venue-section {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: rgba(231, 169, 79, 0.1); /* Light gold transparent background */
+            border-radius: 10px;
+            border: 1px dashed #D35400;
+        }
+        .venue-section h3 {
+            color: #A31A1A;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .venue-section p {
+            color: #5D4037;
+            font-size: 1.2rem;
+        }
+        .invitation-message {
+            background: linear-gradient(to bottom, #A31A1A, #C0392B); /* Gradient for footer */
+            color: #FFF8E1;
+            padding: 2rem 1.5rem;
+            margin-top: 2rem;
+            border-top: 5px solid #E7A94F;
+            border-bottom-left-radius: 15px; /* Match card radius */
+            border-bottom-right-radius: 15px; /* Match card radius */
+        }
+        .invitation-message p:first-child {
+            font-size: 1.25rem;
+        }
+        /* Enhanced Garlands using SVG for more detail */
+        .hanging-decoration-svg {
+            position: absolute;
+            top: 70px; /* Adjust based on arch */
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-around;
+            z-index: 2;
+            padding: 0 10px;
+        }
+        .garland-svg {
+            width: 30%; /* Adjust width as needed */
+            max-width: 80px; /* Max width for each garland */
+        }
+        /* Golden Divider */
+        .golden-divider {
+            height: 2px;
+            background: linear-gradient(to right, transparent, #E7A94F, transparent);
+            margin: 1rem auto;
+            width: 80%;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <div class="card-container relative">
+        <div class="decorative-top-arch"></div>
+
+        <div class="hanging-decoration-svg hidden md:flex">
+            <svg class="garland-svg" viewBox="0 0 50 150" xmlns="http://www.w3.org/2000/svg">
+                <line x1="25" y1="0" x2="25" y2="150" stroke="#D4AF37" stroke-width="1"/>
+                <circle cx="25" cy="20" r="8" fill="#FF9800" stroke="#D4AF37" stroke-width="1"/>
+                <polygon points="25,35 20,45 30,45" fill="#4CAF50"/>
+                <circle cx="25" cy="55" r="6" fill="#FFC107" stroke="#D4AF37" stroke-width="1"/>
+                <polygon points="25,70 20,80 30,80" fill="#8BC34A"/>
+                <circle cx="25" cy="90" r="8" fill="#FF9800" stroke="#D4AF37" stroke-width="1"/>
+                <polygon points="25,105 20,115 30,115" fill="#4CAF50"/>
+                <circle cx="25" cy="125" r="5" fill="#FFC107" stroke="#D4AF37" stroke-width="1"/>
+            </svg>
+            <svg class="garland-svg" viewBox="0 0 50 150" xmlns="http://www.w3.org/2000/svg">
+                <line x1="25" y1="0" x2="25" y2="150" stroke="#D4AF37" stroke-width="1"/>
+                <circle cx="25" cy="15" r="7" fill="#FF5722" stroke="#D4AF37" stroke-width="1"/>
+                <polygon points="25,30 20,40 30,40" fill="#009688"/>
+                <circle cx="25" cy="50" r="9" fill="#FF9800" stroke="#D4AF37" stroke-width="1"/>
+                <polygon points="25,65 20,75 30,75" fill="#4CAF50"/>
+                <circle cx="25" cy="85" r="6" fill="#FFEB3B" stroke="#D4AF37" stroke-width="1"/>
+                 <polygon points="25,100 20,110 30,110" fill="#009688"/>
+                <circle cx="25" cy="120" r="8" fill="#FF5722" stroke="#D4AF37" stroke-width="1"/>
+            </svg>
+            <svg class="garland-svg" viewBox="0 0 50 150" xmlns="http://www.w3.org/2000/svg">
+                <line x1="25" y1="0" x2="25" y2="150" stroke="#D4AF37" stroke-width="1"/>
+                <circle cx="25" cy="20" r="8" fill="#FF9800" stroke="#D4AF37" stroke-width="1"/>
+                <polygon points="25,35 20,45 30,45" fill="#4CAF50"/>
+                <circle cx="25" cy="55" r="6" fill="#FFC107" stroke="#D4AF37" stroke-width="1"/>
+                <polygon points="25,70 20,80 30,80" fill="#8BC34A"/>
+                <circle cx="25" cy="90" r="8" fill="#FF9800" stroke="#D4AF37" stroke-width="1"/>
+                <polygon points="25,105 20,115 30,115" fill="#4CAF50"/>
+                <circle cx="25" cy="125" r="5" fill="#FFC107" stroke="#D4AF37" stroke-width="1"/>
+            </svg>
+        </div>
+
+        <div class="card-content-wrapper text-center">
+            <div class="mb-6 mt-16 pt-8"> <div class="ganesh-icon text-2xl hindi-text"><span>ॐ</span></div> <p class="text-xl hindi-text text-amber-700 font-semibold mt-2">॥ श्री गणेशाय नमः ॥</p>
+                <p class="hindi-text text-sm text-amber-800 leading-relaxed px-4">
+                    वक्रतुण्ड महाकाय सूर्यकोटि समप्रभः।<br>
+                    निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥
+                </p>
+            </div>
+
+            <div class="golden-divider"></div>
+
+            <h1 class="shubh-vivah-title hindi-text">॥ शुभ विवाह ॥</h1>
+
+            <div class="couple-names my-8">
+                <h2 class="hindi-text cursive-text text-rose-800">कंचन कुमारी</h2>
+                <p class="sang hindi-text text-orange-600 py-3">&mdash; संग &mdash;</p>
+                <h2 class="hindi-text cursive-text text-rose-800">जीतेन्द्र कुमार</h2>
+            </div>
+
+            <div class="golden-divider"></div>
+
+            <div class="event-details grid grid-cols-1 md:grid-cols-2 gap-6 my-8 py-6 px-2">
+                <div class="event-item text-center p-6 rounded-xl shadow-md">
+                    <h3 class="hindi-text font-bold text-red-700 mb-2">पूजा-मटकोर</h3>
+                    <p class="serif-text date-text text-slate-700">4th June 2025</p>
+                    <p class="hindi-text day-text text-slate-600">(बुधवार)</p>
+                </div>
+                <div class="event-item text-center p-6 rounded-xl shadow-md">
+                    <h3 class="hindi-text font-bold text-red-700 mb-2">शुभ विवाह</h3>
+                    <p class="serif-text date-text text-slate-700">6th June 2025</p>
+                    <p class="hindi-text day-text text-slate-600">(शुक्रवार)</p>
+                </div>
+            </div>
+            
+            <div class="golden-divider"></div>
+
+            <div class="venue-section text-center my-8 py-4 px-4">
+                <h3 class="hindi-text font-bold">विवाह स्थल</h3>
+                <p class="hindi-text text-lg">करहिया, राजनगर</p>
+                <p class="hindi-text text-sm text-slate-600">(मधुबनी, बिहार)</p>
+                 <a href="#" class="text-sm text-red-700 hover:text-red-900 hindi-text mt-2 inline-block">मानचित्र देखें (Map)</a>
+            </div>
+
+            <div class="golden-divider"></div>
+
+            <div class="my-10">
+                <img src="data:image/jpeg;base64,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" 
+                     alt="Couple's Photo Placeholder" 
+                     class="mx-auto rounded-xl shadow-xl border-6 border-amber-600"
+                     onerror="this.src='https://placehold.co/450x350/FFF8E1/C0392B?text=Image+Not+Available'; this.onerror=null;">
+                <p class="hindi-text text-md text-slate-700 mt-4">आपके स्नेहपूर्ण आशीर्वाद की कामना करते हैं।</p>
+            </div>
+        </div>
+
+        <div class="invitation-message text-center">
+            <p class="hindi-text leading-relaxed">
+                इस शुभ अवसर पर आप सपरिवार सादर आमंत्रित हैं। <br> कृपया पधारकर वर-वधू को अपना शुभाशीर्वाद प्रदान करें।
+            </p>
+            <p class="hindi-text text-lg mt-4 font-semibold">- समस्त परिवारजन एवं मित्रगण</p>
+        </div>
+    </div>
+
+</body>
+</html>
